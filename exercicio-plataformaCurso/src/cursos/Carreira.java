@@ -2,25 +2,28 @@ package cursos;
 
 public class Carreira extends Cursos{
 
-    private int quantidadeCurso = 0;
-    private int horasBack = 0;
-    private int horasFront = 0;
+    public Carreira(String titulo, String categoria, String plataforma, int cargaHoraria, Aluno aluno) {
+        super(titulo, categoria, plataforma, cargaHoraria);
+        
+    }
 
-
-    
+          
     public void matricula() {
         if (getCategoria().equalsIgnoreCase("Back-end")) {
             
-            quantidadeCurso++;
-            horasBack = getCargaHoraria();
-            System.out.println(quantidadeCurso);
-            System.out.println(horasBack);
+            System.out.println("Voce escolheu seguir a carreira " + getCategoria() + ". Bons estudos!!!");
+            System.out.println("Aproveite o curso de " + getTitulo() + " para alavancar sua formação.");
+            System.out.println("Bons estudos!!!");
 
 
-        } else if (getCategoria().equalsIgnoreCase("Front-end")) {
-            quantidadeCurso++;
-            horasFront = getCargaHoraria();
+        } else if (getCategoria().equalsIgnoreCase("Front-end")){
+            System.out.println("Voce escolheu seguir a carreira " + getCategoria() + ".");
+            System.out.println("Aproveite o curso de " + getTitulo() + " para alavancar sua formação.");
+            System.out.println("Bons estudos!!!");
         }
     }
 
 }
+
+
+

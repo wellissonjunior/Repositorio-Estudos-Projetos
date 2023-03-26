@@ -6,6 +6,16 @@ public class Aluno {
     private String email;
 
     
+
+
+    
+    public Aluno(String nome, int idade, String email) {
+        this.nome = nome;
+        this.idade = idade;
+        this.email = email;
+    }
+
+    
     public String getNome() {
         return nome;
     }
@@ -28,6 +38,9 @@ public class Aluno {
     public String toString() {
         return "Aluno: nome = " + nome + ", idade = " + idade + " anos" + ", email = " + email;
     }
+
+
+    
 
     
 }

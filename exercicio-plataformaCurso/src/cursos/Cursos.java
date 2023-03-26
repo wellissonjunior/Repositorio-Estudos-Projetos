@@ -1,18 +1,26 @@
 package cursos;
 
 
-
-/**
- * Cursos
- */
-public class Cursos {
+public abstract class Cursos {
     private String titulo;
     private String categoria;
     private String plataforma;
     private int cargaHoraria;
-
+    private Aluno aluno;
 
     
+    
+   
+
+
+    public Cursos(String titulo, String categoria, String plataforma, int cargaHoraria) {
+        this.titulo = titulo;
+        this.categoria = categoria;
+        this.plataforma = plataforma;
+        this.cargaHoraria = cargaHoraria;
+    }
+
+
     public String getTitulo() {
         return titulo;
     }
@@ -37,6 +45,16 @@ public class Cursos {
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
+
+    public Aluno getAluno() {
+            return aluno;
+    }
+
+
+    public void setAluno(Aluno aluno) {
+            this.aluno = aluno;
+    }
+
     @Override
     public String toString() {
         return "Cursos: titulo = " + titulo + ", categoria = " + categoria + ", plataforma = " + plataforma
